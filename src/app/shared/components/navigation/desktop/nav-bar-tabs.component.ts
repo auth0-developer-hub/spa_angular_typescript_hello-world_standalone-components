@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { AuthService } from '@auth0/auth0-angular';
 import { NavBarTabComponent } from './nav-bar-tab.component';
 

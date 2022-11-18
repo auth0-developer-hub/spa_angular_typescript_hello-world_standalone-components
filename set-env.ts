@@ -17,6 +17,7 @@ const envConfigFile = `export const environment = {
     domain: '${process.env['AUTH0_DOMAIN']}',
     clientId: '${process.env['AUTH0_CLIENT_ID']}',
     redirectUri: '${process.env['AUTH0_CALLBACK_URL']}',
+    audience: '${process.env['AUTH0_AUDIENCE']}',
     errorPath: '/callback',
   },
 };
