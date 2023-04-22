@@ -6,5 +6,9 @@ export const ROUTES: Route[] = [
   {path: 'public', loadComponent: () => import('./features/public/public.component').then(mod => mod.PublicComponent)},
   {path: 'protected', loadComponent: () => import('./features/protected/protected.component').then(mod => mod.ProtectedComponent)},
   {path: 'admin', loadComponent: () => import('./features/admin/admin.component').then(mod => mod.AdminComponent)},
+  {
+    path: 'callback',
+    loadComponent: () => import('./features/callback/callback.component').then(mod => mod.CallbackComponent)
+  },
   {path: '**', loadComponent: () => import('./features/not-found/not-found.component').then(mod => mod.NotFoundComponent)},
 ];

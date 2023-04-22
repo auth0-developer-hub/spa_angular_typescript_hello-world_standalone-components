@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { AuthModule } from '@auth0/auth0-angular';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { ROUTES } from './app/routes';
@@ -14,7 +15,10 @@ bootstrapApplication(AppComponent, {
   providers:[
     importProvidersFrom(
       RouterModule.forRoot(ROUTES),
-      HttpClientModule
+      HttpClientModule,
+      AuthModule.forRoot({
+        ...environment.auth0
+      }),
     ),
   ]
 });
