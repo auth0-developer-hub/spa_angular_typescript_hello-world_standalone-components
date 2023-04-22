@@ -59,7 +59,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "spa-angular-typescript-hello-world:build",
-            "port": 4040,
+            "port": 40400,
             "host": "0.0.0.0"
           },
           "configurations": {
