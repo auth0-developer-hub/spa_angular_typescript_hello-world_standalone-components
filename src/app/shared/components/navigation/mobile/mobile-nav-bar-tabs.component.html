@@ -9,14 +9,17 @@
     label="Public"
     (mobileNavBarTabClick)="onMobileNavBarTabClick($event)"
   ></app-mobile-nav-bar-tab>
-  <app-mobile-nav-bar-tab
-    path="/protected"
-    label="Protected"
-    (mobileNavBarTabClick)="onMobileNavBarTabClick($event)"
-  ></app-mobile-nav-bar-tab>
-  <app-mobile-nav-bar-tab
-    path="/admin"
-    label="Admin"
-    (mobileNavBarTabClick)="onMobileNavBarTabClick($event)"
-  ></app-mobile-nav-bar-tab>
+  <ng-container *nfIf="isAuthenticated$ | async">
+    <app-mobile-nav-bar-tab
+      path="/protected"
+      label="Protected"
+      (mobileNavBarTabClick)="onMobileNavBarTabClick($event)"
+    ></app-mobile-nav-bar-tab>
+    <app-mobile-nav-bar-tab
+      path="/admin"
+      label="Admin"
+      (mobileNavBarTabClick)="onMobileNavBarTabClick($event)"
+    ></app-mobile-nav-bar-tab>
+  </ng-container>
+
 </div>
