@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { AuthService } from "@auth0/auth0-angular";
 import { PageLoaderComponent } from './shared';
 

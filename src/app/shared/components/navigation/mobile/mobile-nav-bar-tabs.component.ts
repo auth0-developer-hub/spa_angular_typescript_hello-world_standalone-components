@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { MobileNavBarTabComponent } from './mobile-nav-bar-tab.component';
 
@@ -11,7 +11,7 @@ import { MobileNavBarTabComponent } from './mobile-nav-bar-tab.component';
 })
 export class MobileNavBarTabsComponent {
   @Output() mobileNavBarTabClick = new EventEmitter<string>();
-  
+
   isAuthenticated$ = this.auth.isAuthenticated$;
 
   constructor(private auth: AuthService) {}

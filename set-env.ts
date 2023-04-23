@@ -10,15 +10,16 @@ const targetPath = './src/environments/environment.ts';
 
 const envConfigFile = `export const environment = {
   production: false,
+  api: {
+    serverUrl: '${process.env['API_SERVER_URL']}',
+  },
   auth0: {
     domain: '${process.env['AUTH0_DOMAIN']}',
     clientId: '${process.env['AUTH0_CLIENT_ID']}',
     authorizationParams: {
       redirect_uri: '${process.env['AUTH0_CALLBACK_URL']}',
     },
-  },
-  api: {
-    serverUrl: '${process.env['API_SERVER_URL']}',
+    errorPath: '/callback',
   },
 };
 `;

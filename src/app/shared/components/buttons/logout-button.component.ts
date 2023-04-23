@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { CommonModule,DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
@@ -11,6 +11,7 @@ import { AuthService } from '@auth0/auth0-angular';
   `
 })
 export class LogoutButtonComponent {
+
   constructor(
     private auth: AuthService,
     @Inject(DOCUMENT) private doc: Document,
