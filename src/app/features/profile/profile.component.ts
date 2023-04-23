@@ -17,7 +17,7 @@ export class ProfileComponent {
   title = 'Decoded ID Token';
 
   user$ = this.authService.user$;
-  code$ = this.user$.pipe(map((user) => JSON.stringify(user, null, 2)));
+  code$ = this.user$.pipe(map((user) => JSON.stringify(user, null, 2))); // the user property is null if there is no logged-in user. So either way, this component should only render if Auth0 has authenticated the user.
 
   constructor(private authService: AuthService) {}
 }

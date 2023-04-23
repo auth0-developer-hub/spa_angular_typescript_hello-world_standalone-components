@@ -6,11 +6,11 @@ export const ROUTES: Route[] = [
     path: '', 
     pathMatch: 'full', 
     loadComponent: () => import('./features/home/home.component').then(mod => mod.HomeComponent),
-    canActivate: [AuthGuard]
   },
   {
     path: 'profile', 
-    loadComponent: () => import('./features/profile/profile.component').then(mod => mod.ProfileComponent)
+    loadComponent: () => import('./features/profile/profile.component').then(mod => mod.ProfileComponent),
+    canActivate: [AuthGuard]
   },
   {
     path: 'public', 
