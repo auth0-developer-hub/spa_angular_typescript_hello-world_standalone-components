@@ -19,12 +19,8 @@ export class LoginButtonComponent {
     this.auth.loginWithRedirect({
       appState: {
         target: '/profile', /* If you don't specify this appState.returnTo option, your users will be redirected by default to the / path after they log in. */
-        returnTo: '/profile' // Note, may be the same as "target"
+        // returnTo: '/profile' // Note, may be the same as "target"
       },
-      /* Add User Sign-Up to Angular */
-      authorizationParams : {
-        screen_hint: "signup"
-      }
     });
   }
 }

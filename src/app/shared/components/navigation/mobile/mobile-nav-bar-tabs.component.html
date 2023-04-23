@@ -9,7 +9,7 @@
     label="Public"
     (mobileNavBarTabClick)="onMobileNavBarTabClick($event)"
   ></app-mobile-nav-bar-tab>
-  <ng-container *nfIf="isAuthenticated$ | async">
+  <ng-container *ngIf="isAuthenticated$ | async">
     <app-mobile-nav-bar-tab
       path="/protected"
       label="Protected"
