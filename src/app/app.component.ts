@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AuthService } from "@auth0/auth0-angular";
+import { PageLoaderComponent } from './shared';
 
 @Component({
   standalone: true,
-  imports: [RouterModule],
+  imports: [CommonModule, RouterModule, PageLoaderComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent {}
+export class AppComponent {
+  private auth = inject(AuthService);
+  isAuth0Loading$ = this.auth.isLoading$;
+}

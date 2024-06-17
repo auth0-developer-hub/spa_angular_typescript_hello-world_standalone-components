@@ -5,6 +5,7 @@ import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { ROUTES } from './app/routes';
 import { environment } from './environments/environment';
+import { provideAuth0 } from '@auth0/auth0-angular';
 
 if (environment.production) {
   enableProdMode();
@@ -13,6 +14,7 @@ if (environment.production) {
 bootstrapApplication(AppComponent, {
   providers:[
     provideRouter(ROUTES),
-    provideHttpClient()
+    provideHttpClient(),
+    provideAuth0(environment.auth0)
   ]
 });
